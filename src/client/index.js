@@ -19,18 +19,15 @@ const submit = document.getElementById('submit-name');
 const save = document.getElementById('save');
 const resetButton = document.getElementById('reset-button')
 
-
 submit.addEventListener('click',() => {   
     imageCapture(); 
     countryCapture();
     countDown();   
- 
 });
 
 save.addEventListener('click',() => {   
     saveTrip()
 });
-
 
 window.addEventListener('click', function (e) {
   if (e.target.classList.contains('remove-button')) {
@@ -38,6 +35,6 @@ window.addEventListener('click', function (e) {
   }
 });
 
- resetButton.addEventListener('click', resetForm)
+resetButton.addEventListener('click', resetForm)
 
 export { countryCapture, countDown, imageCapture, saveTrip, removeData, resetForm }
