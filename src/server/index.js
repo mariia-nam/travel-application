@@ -1,6 +1,5 @@
 const dotenv = require('dotenv');
 dotenv.config();
-
 const geoKey = process.env.geoKey
 const pixaKey = process.env.pixaKey
 const weatherKey = process.env.weatherKey
@@ -11,13 +10,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express()
 
-
-
 app.use(cors());
-
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
 app.use(express.static('dist'))
 
 console.log(__dirname)
@@ -30,7 +25,6 @@ app.listen(3333, function () {
 app.get('/', function (req, res) {
     res.sendFile(path.resolve('dist/index.html'))
 })
-
 
 var geoData 
 //*GEONAMES*// 
@@ -45,13 +39,11 @@ app.post('/response', async (req, res) => {
             var long = data.geonames[0].lng
             var lat = data.geonames[0].lat
             geoData = {long, lat}
-
         }
          catch(error) {
              console.log(error)
          }
 })
-
 
 //*PIXABAY*//
 app.post('/image', async (req, res) => {
