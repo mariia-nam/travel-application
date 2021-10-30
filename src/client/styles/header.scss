@@ -1,0 +1,15 @@
+$background-color: #fff7edd9;
+$secondary-background-color: #FFEAD0;
+$color-text: black;
+$button-text-color: white;
+$button-color: transparent;
+$secondary-button-color: #37505c5e;
+/*FONTS*/
+$font-header: 'Montserrat', sans-serif;;
+/*SIZES*/
+$font-size-header: 2rem;
+$font-size-base: 1rem;
+
+header {
+    background-color: $secondary-background-color;
+}

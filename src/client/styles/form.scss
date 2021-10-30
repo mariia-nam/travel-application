@@ -1,0 +1,73 @@
+
+$background-color: #fff7edd9;
+$secondary-background-color: #FFEAD0;
+$color-text: black;
+$button-text-color: white;
+$button-color: transparent;
+$secondary-button-color: #37505c5e;
+/*FONTS*/
+$font-header: 'Montserrat', sans-serif;
+/*SIZES*/
+$font-size-header: 2rem;
+$font-size-base: 1rem;
+
+.insert-form {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+}
+
+input {
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 15px;
+}
+ 
+.btn-disabled {
+    background-color: $secondary-button-color;
+    color: $color-text;
+}
+
+.holder {
+    margin-right: 2rem;
+}
+
+.output-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 25px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+#country-image {
+    width: 100%;
+    height: auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .output-inner {
+      display: block;
+      padding: 0;
+    }
+
+    .output-text {
+        padding: 1.5rem
+    }
+
+    .insert-form {
+        flex-direction: column;
+    align-items: center;
+    div {
+        margin-bottom: 1.5rem;
+    }
+}
+    #country-image {
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+
+    }
+  }

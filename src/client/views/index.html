@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Travel App</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="section-header padding">
+    <div class="page-width">
+    <h1>Your Only Travel Planner</h1>
+</div>
+</header>
+<main class="main-content">
+    <section id="input-section" class="center page-width padding">
+      <h3>Where are you planning to go?</h3>
+      <form class="insert-form">
+        <div class="holder">
+            <label for="planned-location">City:</label>
+            <input type="text" id="planned-location" placeholder="name">
+          </div>
+          <div class="holder">
+            <label for="planned-date">Date:</label>
+            <input type="date" id="planned-date" max="2022-12-31">
+          </div>
+          <input id="reset-button" class="btn" type="reset" value="Reset">
+        </form>          
+        <button id="submit-name" class="btn">Submit</button>
+        <h3 id="error-msg" class="hide">We could not find your destination.</h3>
+    </section>
+
+    <section id="output-section" class="page-width padding hide">
+      <div class="output-inner">
+      <div>
+      <img id="country-image"/>
+    </div>
+    <div class="output-text">
+<h3 id="country-output"></h3>
+<h3 id="date-output"></h3>
+<div class="btn-container">
+  <button id="save" class="btn">Save trip</button>
+</div>
+<h4 id="date-count"></h4>
+<h4>Typically the weather for this time of the year is:<br>
+<span id="weather-output"></span></h4>
+<h4 id="sky-status"></h4>
+</div></div>
+    </section>
+
+    <section id="saved-data" class="page-width hide">
+    </section>
+</main>
+<footer></footer>
+<script>
+  if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+      });
+  }
+ </script>
+</body>
+</html>
